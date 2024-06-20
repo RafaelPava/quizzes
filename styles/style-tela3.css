@@ -95,3 +95,7 @@ a{
     text-decoration: none;
     color: #818181;
 }
+
+.tela3--escondido{
+    display: none;
+}
