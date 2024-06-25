@@ -102,8 +102,16 @@ h2{
     gap: 3% 2%;
 }
 
+.quizes-existentes{
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
 .quizes__imgs{
     width: 340px;
+    height: 181px;
+    /*-webkit-mask-image: linear-gradient(to bottom, transparent 100%, black 100%);*/
 }
 
 @media (max-width: 1100px){

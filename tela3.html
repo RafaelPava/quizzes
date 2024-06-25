@@ -14,53 +14,80 @@
         <div class="tela3__comeco">
             <h2>Comece pelo começo</h2>
             <div class="tela3__formulario">
-                <input class="tela3__formulario__campos" type="text" placeholder="Título do seu quizz">
-                <input class="tela3__formulario__campos" type="text" placeholder="URL da imagem do seu quizz">
-                <input class="tela3__formulario__campos" type="text" placeholder="Quantidade de perguntas do quizz">
-                <input class="tela3__formulario__campos" type="text" placeholder="Quantidade de níveis do quizz">
+                <input id="titulo" class="tela3__formulario__campos" type="text" placeholder="Título do seu quizz">
+                <input id="imagem" class="tela3__formulario__campos" type="text" placeholder="URL da imagem do seu quizz">
+                <input id="qtd-perguntas" class="tela3__formulario__campos" type="text" placeholder="Quantidade de perguntas do quizz">
+                <input id="qtd-niveis" class="tela3__formulario__campos" type="text" placeholder="Quantidade de níveis do quizz">
             </div>
-            <input class="botao-criar-formulario" type="submit" value="Prosseguir pra criar perguntas">
+            <button class="botao-criar-formulario" onclick="inicioDoQuizz()">Prosseguir pra criar preguntas</button>
         </div>
         <div class="tela3__perguntas tela3--escondido">
-            <h2>Crie suas perguntas</h2>
+            <h2>Crie suas perguntas (mínimo de 2)</h2>
             <div class="tela3__formulario">
-                <h3>Pergunta 1</h3>
-                <input class="tela3__formulario__campos" type="text" placeholder="Texto da pergunta">
-                <input class="tela3__formulario__campos" type="text" placeholder="Cor de fundo da pergunta">
-                <h3>Resposta correta</h3>
-                <br>
-                <input class="tela3__formulario__campos" type="text" placeholder="Resposta correta">
-                <input class="tela3__formulario__campos" type="text" placeholder="URL da imagem">
-                <br>
-                <h3>Respostas incorretas</h3>
-                <br>
-                <input class="tela3__formulario__campos" type="text" placeholder="Resposta incorreta 1">
-                <input class="tela3__formulario__campos" type="text" placeholder="URL da imagem 1">
-                <br>
-                <input class="tela3__formulario__campos" type="text" placeholder="Resposta incorreta 2">
-                <input class="tela3__formulario__campos" type="text" placeholder="URL da imagem 2">
-                <br>
-                <input class="tela3__formulario__campos" type="text" placeholder="Resposta incorreta 3">
-                <input class="tela3__formulario__campos" type="text" placeholder="URL da imagem 3">
+                <div class="vertical">
+                    <h3>Pergunta 1</h3>
+                    <input id="pergunta" class="tela3__formulario__campos" type="text" placeholder="Texto da pergunta">
+                    <input id="cor" class="tela3__formulario__campos" type="text" placeholder="Cor de fundo da pergunta (em hexadecimal: #FFFFFF)">
+                </div>
+                <div class="vertical">
+                    <br>
+                    <h3>Resposta correta</h3>
+                    <div>
+                        <input id="resposta" class="tela3__formulario__campos" type="text" placeholder="Resposta correta">
+                        <input id="imagem" class="tela3__formulario__campos" type="text" placeholder="URL da imagem">
+                    </div>
+                    <br>
+                    <h3>Respostas incorretas</h3>
+                    <div>
+                        <input id="resposta" class="tela3__formulario__campos" type="text" placeholder="Resposta incorreta 1">
+                        <input id="imagem" class="tela3__formulario__campos" type="text" placeholder="URL da imagem 1">
+                    </div>
+                    <br>
+                    <div>
+                        <input id="resposta" class="tela3__formulario__campos" type="text" placeholder="Resposta incorreta 2">
+                        <input id="imagem" class="tela3__formulario__campos" type="text" placeholder="URL da imagem 2">
+                    </div>
+                    <br>
+                    <div>
+                        <input id="resposta" class="tela3__formulario__campos" type="text" placeholder="Resposta incorreta 3">
+                        <input id="imagem" class="tela3__formulario__campos" type="text" placeholder="URL da imagem 3">
+                    </div>
+                </div>
             </div>
-            <input class="botao-criar-formulario" type="submit" value="Prosseguir pra criar níveis">
+            <div class="novo-formulario">
+                <h3>Pergunta 2</h3>
+                <button class="novo-item" onclick="criarNovaPergunta()"><img src="./imgs/vector.png" width="26px" height="23px"></button>
+                <div class="tela3__formulario tela3--escondido"></div>
+            </div>
+            
+            <button class="botao-criar-formulario" onclick="perguntasDoQuizz()">Prosseguir pra criar níveis</button>
         </div>
         <div class="tela3__niveis tela3--escondido">
             <h2>Agora, decida os níveis</h2>
             <div class="tela3__formulario">
-                <input class="tela3__formulario__campos" type="text" placeholder="Título do nível">
-                <input class="tela3__formulario__campos" type="text" placeholder="% de acertos mínima">
-                <input class="tela3__formulario__campos" type="text" placeholder="URL da imagem do nível">
-                <input class="tela3__formulario__campos" type="text" placeholder="Descrição do nível">
+                <div class="vertical">
+                    <h3>Nível 1</h3>
+                    <input id="nivel1" class="tela3__formulario__campos" type="text" placeholder="Título do nível">
+                    <input id="taxaAcertos1" class="tela3__formulario__campos" type="text" placeholder="% de acertos mínima">
+                    <input id="urlImagemNivel1" class="tela3__formulario__campos" type="text" placeholder="URL da imagem do nível">
+                    <input id="descricaoNivel1" class="tela3__formulario__campos" type="text" placeholder="Descrição do nível">
+                </div>
             </div>
-            <input class="botao-criar-formulario" type="submit" value="Finalizar Quizz">
+            <div class="novo-formulario">
+                <h3>Nível 2</h3>
+                <button class="novo-item" onclick="criarNovoNivel()"><img src="./imgs/vector.png" width="26px" height="23px"></button>
+                <div class="tela3__formulario tela3--escondido"></div>
+            </div>
+            <button class="botao-criar-formulario" onclick="criarQuizz()">Finalizar Quizz</button>
         </div>
         <div class="tela3__finalizada tela3--escondido">
             <h2>Seu quizz está pronto!</h2>
             <img src="./imgs/group-46.png">
-            <input class="botao-criar-formulario" type="submit" value="Acessar Quizz">
+            <a class="botao-criar-formulario" href="tela2.html">Acessar Quizz</a>
             <a href="index.html">Voltar pra home</a>
         </div>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="./codigos/tela3.js"></script>
 </body>
 </html>
