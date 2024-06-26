@@ -136,3 +136,7 @@ a{
     flex-direction: column;
     gap: 10px;
 }
+
+.error{
+    color: #EC362D;
+}

@@ -32,35 +32,28 @@
                 <div class="vertical">
                     <br>
                     <h3>Resposta correta</h3>
-                    <div>
+                    <div class="vertical">
                         <input id="resposta" class="tela3__formulario__campos" type="text" placeholder="Resposta correta">
                         <input id="imagem" class="tela3__formulario__campos" type="text" placeholder="URL da imagem">
                     </div>
                     <br>
                     <h3>Respostas incorretas</h3>
-                    <div>
+                    <div class="vertical">
                         <input id="resposta" class="tela3__formulario__campos" type="text" placeholder="Resposta incorreta 1">
                         <input id="imagem" class="tela3__formulario__campos" type="text" placeholder="URL da imagem 1">
                     </div>
                     <br>
-                    <div>
+                    <div class="vertical">
                         <input id="resposta" class="tela3__formulario__campos" type="text" placeholder="Resposta incorreta 2">
                         <input id="imagem" class="tela3__formulario__campos" type="text" placeholder="URL da imagem 2">
                     </div>
                     <br>
-                    <div>
+                    <div class="vertical">
                         <input id="resposta" class="tela3__formulario__campos" type="text" placeholder="Resposta incorreta 3">
                         <input id="imagem" class="tela3__formulario__campos" type="text" placeholder="URL da imagem 3">
                     </div>
                 </div>
-            </div>
-            <div class="novo-formulario">
-                <h3>Pergunta 2</h3>
-                <button class="novo-item" onclick="criarNovaPergunta()"><img src="./imgs/vector.png" width="26px" height="23px"></button>
-                <div class="tela3__formulario tela3--escondido"></div>
-            </div>
-            
-            <button class="botao-criar-formulario" onclick="perguntasDoQuizz()">Prosseguir pra criar níveis</button>
+            </div>            
         </div>
         <div class="tela3__niveis tela3--escondido">
             <h2>Agora, decida os níveis</h2>
@@ -73,18 +66,9 @@
                     <input id="descricaoNivel1" class="tela3__formulario__campos" type="text" placeholder="Descrição do nível">
                 </div>
             </div>
-            <div class="novo-formulario">
-                <h3>Nível 2</h3>
-                <button class="novo-item" onclick="criarNovoNivel()"><img src="./imgs/vector.png" width="26px" height="23px"></button>
-                <div class="tela3__formulario tela3--escondido"></div>
-            </div>
-            <button class="botao-criar-formulario" onclick="criarQuizz()">Finalizar Quizz</button>
         </div>
         <div class="tela3__finalizada tela3--escondido">
-            <h2>Seu quizz está pronto!</h2>
-            <img src="./imgs/group-46.png">
-            <a class="botao-criar-formulario" href="tela2.html">Acessar Quizz</a>
-            <a href="index.html">Voltar pra home</a>
+            
         </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
