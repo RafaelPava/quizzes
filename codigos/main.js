@@ -23,12 +23,12 @@ function obterQuizzes(){
             let auxiliar = 0;
             for(let j=0;j<meusQuizzes.length;j++){
                 if(quizes.data[i].id === meusQuizzes[j]){
-                    meusQuizes.innerHTML += `<a class="quizes-existentes" href="tela2.html/${quizes.data[i].id}"><img class="quizes__imgs" src="${quizes.data[i].image}">${quizes.data[i].title}</a>`
+                    meusQuizes.innerHTML += `<a class="quizes-existentes" href="tela2.html?id=${quizes.data[i].id}"><img class="quizes__imgs" src="${quizes.data[i].image}">${quizes.data[i].title}</a>`
                     auxiliar = 1;
                 }
             }
             if(auxiliar === 0){
-                quiz.innerHTML += `<a class="quizes-existentes" href="tela2.html/${quizes.data[i].id}"><img class="quizes__imgs" src="${quizes.data[i].image}">${quizes.data[i].title}</a>`
+                quiz.innerHTML += `<a class="quizes-existentes" href="tela2.html?id=${quizes.data[i].id}"><img class="quizes__imgs" src="${quizes.data[i].image}">${quizes.data[i].title}</a>`
             }else{
                 continue
             }

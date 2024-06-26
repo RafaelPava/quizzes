@@ -10,7 +10,8 @@ let numberCorrectAnswer = 0
 let numberAnswers = 0
 
 function start(){
-    axios.get("https://mock-api.driven.com.br/api/v4/buzzquizz/quizzes/40").then((answer) => {
+    const urlParams = new URLSearchParams(window.location.search);
+    axios.get(`https://mock-api.driven.com.br/api/v4/buzzquizz/quizzes/${urlParams.get('id')}`).then((answer) => {
         console.log(answer.data)
         createHTML(answer.data)
     }).catch((err) => {
@@ -134,7 +135,26 @@ function levelSelection(numberCorrectAnswers, numberQuestions){
     for(let i=allResults.length-1; i>=0;i--){
         if(allResults[i].minValue <= rate){
             document.querySelector('body').innerHTML+=allResults[i].result_html
+            document.querySelector('body').innerHTML+=`
+            <div class="caixa-buttons">
+            <button class="reset" onclick="reset()">
+                Reniciar Quizz
+            </button>
+            <a href='index.html'>
+            <button class="home">
+                Voltar para Home
+            </button>
+            </a>
+        </div>
+            `
+            setTimeout(()=> {
+                document.querySelector('.card-result').scrollIntoView({behavior: 'smooth'})
+            }, 1300)
             break
         }
     }
+}
+
+function reset(){
+    window.location.reload()
 }
